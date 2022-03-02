@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "name": "Deluxe Single Room",
+    "title": "This single room features a balcony, cable TV and iPod dock.",
+    "image": "https://i.ibb.co/NCSvGSs/Deluxe-Single-Room.jpg",
+    "price": "2000"
+  },
+  {
+    "id": "2",
+    "name": "Deluxe Double Room",
+    "title": "This single room has a CD player, satellite TV and air conditioning.",
+    "image": "https://i.ibb.co/x7X81zq/Deluxe-Double-Room-2-Adults-1-Child.jpg",
+    "price": "4000"
+  },
+  {
+    "id": "3",
+    "name": "Deluxe Family Suite",
+    "title": "This double room has a CD player, soundproofing and air conditioning.",
+    "image": "https://i.ibb.co/gWKy0S8/Deluxe-Double-Room.jpg",
+    "price": "5000"
+  },
+  {
+    "id": "4",
+    "name": "Deluxe Queen Suite",
+    "title": "This suite features a balcony, executive lounge access and CD player.",
+    "image": "https://i.ibb.co/FqJs8c8/Deluxe-Queen-Suite.jpg",
+    "price": "6500"
+  },
+  {
+    "id": "5",
+    "name": "Deluxe King Suite",
+    "title": "This suite features a balcony, satellite TV and seating area.",
+    "image": "https://i.ibb.co/fSC6Bh0/Deluxe-King-Suite.jpg",
+    "price": "7500"
+  },
+  {
+    "id": "6",
+    "name": "Superior King Suite",
+    "title": "This suite features a CD player, dining area and hot tub.",
+    "image": "https://i.ibb.co/W2ML1yV/Superior-King-Suite.jpg",
+    "price": "6500"
+  }
+]

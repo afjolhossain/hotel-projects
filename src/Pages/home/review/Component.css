@@ -1,0 +1,25 @@
+.conatiner {
+  margin-bottom: 8rem;
+  margin-top: 3rem;
+}
+.title {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+.reviwe-client-div {
+  margin-top: 3rem;
+  background-color: #5f80a1;
+  border: 1rem solid #f1948a;
+  text-align: start;
+  color: aliceblue;
+  margin-right: 10px;
+}
+
+.image {
+  width: 120px;
+  margin: auto;
+  border-radius: 50%;
+}
+.special-color {
+  color: #e75917;
+}
