@@ -8,7 +8,7 @@ const Navigation = () => {
   const { user, logOut } = useAuth();
   return (
     <Navbar
-      style={{ backgroundColor: "#566573" }}
+      style={{ backgroundColor: "#AB3A57" }}
       collapseOnSelect
       expand="lg"
       variant="light"
@@ -18,6 +18,39 @@ const Navigation = () => {
         <Nav>
           <Navbar.Toggle />
           <Navbar.Collapse>
+            <NavLink
+              style={{
+                textDecoration: "none",
+                fontSize: "20px",
+                marginRight: "1rem",
+                color: "white",
+              }}
+              to="/addService"
+            >
+              Add-Service
+            </NavLink>
+            <NavLink
+              style={{
+                textDecoration: "none",
+                fontSize: "20px",
+                marginRight: "1rem",
+                color: "white",
+              }}
+              to="/myOrder"
+            >
+              My-Order
+            </NavLink>
+            <NavLink
+              style={{
+                textDecoration: "none",
+                fontSize: "20px",
+                marginRight: "1rem",
+                color: "white",
+              }}
+              to="/manageAllOrder"
+            >
+              Manage-All-Order
+            </NavLink>
             {user?.email ? (
               <Button onClick={logOut} variant="secondary">
                 LogOut
@@ -27,7 +60,7 @@ const Navigation = () => {
                 to="/login"
                 style={{
                   color: "black",
-                  fontSize: "25px",
+                  fontSize: "20px",
                   fontWeight: "700px",
                 }}
               >
@@ -38,8 +71,9 @@ const Navigation = () => {
           <Navbar.Text
             style={{ color: "black", fontSize: "25px", fontWeight: "700px" }}
           >
-            Signed in as:
-            <a href="#login">Mark Otto</a>
+            <a href="#login" style={{ textDecoration: "none" }}>
+              {user.displayName}
+            </a>
           </Navbar.Text>
         </Nav>
       </Container>

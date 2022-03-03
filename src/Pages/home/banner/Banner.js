@@ -3,11 +3,10 @@ import { Carousel } from "react-bootstrap";
 import banner1 from "../../../images/banner-4.jpg";
 import banner2 from "../../../images/ralph-ravi-kayden.jpg";
 import banner3 from "../../../images/vojtech-bruzek.jpg";
-import Navigation from "../../Shared/Navigation/Navigation";
+
 const Banner = () => {
   return (
     <div>
-      <Navigation></Navigation>
       <Carousel>
         <Carousel.Item>
           <img

@@ -8,17 +8,18 @@ import {
   Row,
   Spinner,
 } from "react-bootstrap";
-import logo from "../../../images/Sylhet.png";
 import loginpage from "../../../images/banner-4.jpg";
 import Navigation from "../../Shared/Navigation/Navigation";
 import Footer from "../../Shared/footer/Footer";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 
 const Register = () => {
   const [loginData, setLoginData] = useState({});
 
-  const { registerUser, isLoading, user, authError } = useAuth();
+  const { registerUser, isLoading, user, authError, signInGoogle } = useAuth();
+
+  const navigate = useNavigate();
 
   const handleOnChange = (e) => {
     const field = e.target.name;
@@ -28,22 +29,13 @@ const Register = () => {
     setLoginData(newLogInData);
   };
   const handleRegisterSubmit = (e) => {
-    registerUser(loginData.email, loginData.password);
+    registerUser(loginData.email, loginData.password, navigate);
     e.preventDefault();
   };
   return (
     <div style={{ backgroundColor: "#ABB2B9" }}>
       <Navigation></Navigation>
       <Container style={{ marginBottom: "3rem" }}>
-        <img
-          style={{
-            width: "130px",
-            marginBottom: "1rem",
-            marginTop: "1rem",
-          }}
-          src={logo}
-          alt=""
-        />
         <Row>
           <Col
             style={{
@@ -65,8 +57,7 @@ const Register = () => {
                   width: "500px",
                   height: "400px",
                   marginTop: "3rem",
-                  borderRadius: "10px",
-                  backgroundColor: "#081B4E",
+                  backgroundColor: "#081B4E ",
                 }}
               >
                 <h2 style={{ fontSize: "30px", color: "#EA510E" }}>Register</h2>
@@ -111,13 +102,14 @@ const Register = () => {
                   style={{ width: "400px" }}
                   type="submit"
                 >
-                  Register
+                  Submit
                 </Button>
                 <br />
                 <Form.Text className="text-muted" style={{ fontSize: "20px" }}>
                   ------------------------OR----------------------
                 </Form.Text>
                 <Button
+                  onClick={signInGoogle}
                   variant="primary"
                   style={{ width: "400px" }}
                   type="submit"
