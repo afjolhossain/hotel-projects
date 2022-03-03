@@ -28,7 +28,7 @@ export default class AutoPlay extends Component {
             <img className="image" src={reviewPerson1} alt="" />
             <div className="client-details">
               <h4>
-                <span className="special-color">Name</span> : Afjol Hossain
+                <span className="special-color">Name</span> : Shahed Ahmed
               </h4>
               <h5>
                 <span className="special-color">Profession</span> : Fontend
@@ -64,7 +64,7 @@ export default class AutoPlay extends Component {
             <img className="image" src={reviewPerson1} alt="" />
             <div className="client-details">
               <h4>
-                <span className="special-color">Name</span> : Afjol Hossain
+                <span className="special-color">Name</span> : Shahed Ahmed
               </h4>
               <h5>
                 <span className="special-color">Profession</span> : Fontend

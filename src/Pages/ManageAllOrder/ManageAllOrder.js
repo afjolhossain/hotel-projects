@@ -10,10 +10,10 @@ const ManageAllOrder = () => {
       .then((data) => setManageOrders(data));
   }, []);
   const handleDelete = (id) => {
-    console.log(id);
-    const confirm = window.confirm("Are you sure about this ?");
-    if (confirm) {
-      fetch(`http://localhost:5000/${id}`, {
+    // console.log(id);
+    const proceed = window.confirm("Are you sure about this ?");
+    if (proceed) {
+      fetch(`http://localhost:5000/orders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

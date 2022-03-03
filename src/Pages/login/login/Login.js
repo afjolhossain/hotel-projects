@@ -21,6 +21,9 @@ const Login = () => {
     newLogInData[field] = value;
     setLoginData(newLogInData);
   };
+  const handleGoogleSignIn = () => {
+    signInGoogle(location, navigate);
+  };
   const handleLoginSubmit = (e) => {
     loginUser(loginData.email, loginData.password, location, navigate);
     e.preventDefault();
@@ -29,7 +32,6 @@ const Login = () => {
     <div
       style={{ margin: "auto", backgroundColor: "#85929E", height: "600px" }}
     >
-      <Navigation></Navigation>
       <Row style={{ marginTop: "1rem", marginBottom: "4rem" }}>
         <Col sm={12} md={6}>
           <img
@@ -79,7 +81,7 @@ const Login = () => {
                 ------------------------OR----------------------
               </Form.Text>
               <Button
-                onClick={signInGoogle}
+                onClick={handleGoogleSignIn}
                 variant="primary"
                 style={{ width: "400px" }}
                 type="submit"
@@ -109,7 +111,6 @@ const Login = () => {
           )}
         </Col>
       </Row>
-      <Footer></Footer>
     </div>
   );
 };

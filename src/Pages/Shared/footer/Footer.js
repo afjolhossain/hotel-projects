@@ -33,14 +33,14 @@ const Footer = () => {
             </div>
             <div className="col text-start">
               <Card.Title>About Us</Card.Title>
-              <Card.Text>Email:afjolhossai074@gmail.com</Card.Text>
+              <Card.Text>Email:multitaskershahed1@gmail.com</Card.Text>
               <Card.Text>Mob: 01741147274</Card.Text>
               <Card.Text>
                 Add. 929 Border Street Satellite Beach, FL 32937
               </Card.Text>
             </div>
             <div>
-              <p>Copyright © 2021 by afjol Hossain</p>
+              <p>Copyright © 2021 by Shahed Ahmed</p>
             </div>
           </div>
         </div>

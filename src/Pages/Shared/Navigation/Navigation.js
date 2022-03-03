@@ -7,16 +7,17 @@ import hotelLogo from "../../../images/Sylhet.png";
 const Navigation = () => {
   const { user, logOut } = useAuth();
   return (
-    <Navbar
-      style={{ backgroundColor: "#AB3A57" }}
-      collapseOnSelect
-      expand="lg"
-      variant="light"
-    >
+    <Navbar style={{ backgroundColor: "#AB3A57" }} variant="light">
       <Container>
-        <img style={{ width: "80px", height: "50px" }} src={hotelLogo} alt="" />
+        <NavLink to="/home">
+          <img
+            style={{ width: "80px", height: "50px" }}
+            src={hotelLogo}
+            alt=""
+          />
+        </NavLink>
         <Nav>
-          <Navbar.Toggle />
+          <Navbar.Toggle collapseOnSelect expand="lg" />
           <Navbar.Collapse>
             <NavLink
               style={{
