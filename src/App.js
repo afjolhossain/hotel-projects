@@ -12,14 +12,11 @@ import PrivateRoute from "./Pages/login/PrivateRoute/PrivateRoute";
 import Register from "./Pages/login/Register/Register";
 import ManageAllOrder from "./Pages/ManageAllOrder/ManageAllOrder";
 import MyOrder from "./Pages/MyOrder/MyOrder";
-import Footer from "./Pages/Shared/footer/Footer";
-import Navigation from "./Pages/Shared/Navigation/Navigation";
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
-        <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
@@ -38,7 +35,6 @@ function App() {
           <Route path="manageAllOrder" element={<ManageAllOrder />} />
           <Route path="order" element={<Order />} />
         </Routes>
-        <Footer />
       </AuthProvider>
     </div>
   );

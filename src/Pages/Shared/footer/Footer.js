@@ -8,7 +8,7 @@ const Footer = () => {
       <Card.Header>Featured</Card.Header>
 
       <Card.Body>
-        <div className="container">
+        <div className="container" sm>
           <div className="row" style={{ color: "white" }}>
             <div className="col text-start">
               <Card.Text>

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Container, Table } from "react-bootstrap";
 import useAuth from "../../hooks/useAuth";
+import Footer from "../Shared/footer/Footer";
+import Navigation from "../Shared/Navigation/Navigation";
 
 const MyOrder = () => {
   const { user } = useAuth();
@@ -34,37 +36,40 @@ const MyOrder = () => {
     }
   };
   return (
-    <Container>
-      <h1>My Order List</h1>
-
-      <Table striped bordered hover variant="dark">
-        <thead>
-          <tr>
-            <th>Email</th>
-            <th>Address</th>
-            <th>Username</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {myOrder.map((order) => (
+    <>
+      <Navigation></Navigation>
+      <Container>
+        <h1>My Order List</h1>
+        <Table striped bordered hover variant="dark">
+          <thead>
             <tr>
-              <td> {order.name}</td>
-              <td> {order.email}</td>
-              <td> {order.address}</td>
-              <td>
-                <button
-                  style={{ marginRight: 10, backgroundColor: "#F1948A" }}
-                  onClick={() => handleDelete(order._id)}
-                >
-                  Delete
-                </button>
-              </td>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Username</th>
+              <th>Delete</th>
             </tr>
-          ))}
-        </tbody>
-      </Table>
-    </Container>
+          </thead>
+          <tbody>
+            {myOrder.map((order) => (
+              <tr>
+                <td> {order.name}</td>
+                <td> {order.email}</td>
+                <td> {order.address}</td>
+                <td>
+                  <button
+                    style={{ marginRight: 10, backgroundColor: "#F1948A" }}
+                    onClick={() => handleDelete(order._id)}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </Container>
+      <Footer></Footer>
+    </>
   );
 };
 

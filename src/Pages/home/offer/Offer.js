@@ -13,16 +13,28 @@ const LoginBG = {
 
 const Offer = () => {
   return (
-    <div style={{ marginTop: "7rem" }}>
-      <div style={LoginBG} className="mt-5rem">
+    <div style={{ margin: "3rem 0" }}>
+      <div style={LoginBG}>
         <Row>
-          <Col style={{ margin: "auto", marginTop: "10rem" }}>
-            <h1 style={{ color: "white" }}>Summer Offer</h1>
-            <h3 style={{ color: "white" }}>
-              Benefit from a 10% discount, making your reservations with a
-              minimum of 3 days in advance
-            </h3>
-            <Button variant="primary">Booking Now</Button>
+          <Col xs={12} md={6}>
+            <div style={{ width: "600px" }}>
+              <h1 style={{ color: "#ED085F " }}>Summer Offer</h1>
+              <h3 style={{ color: "white" }}>
+                Benefit from a 10% discount, making your reservations with a
+                minimum of 3 days in advance
+              </h3>
+              <Button variant="primary">Booking Now</Button>
+            </div>
+          </Col>
+          <Col xs={12} md={6}>
+            <div style={{ width: "600px" }}>
+              <h1 style={{ color: "#ED085F " }}>Summer Offer</h1>
+              <h3 style={{ color: "white" }}>
+                Benefit from a 10% discount, making your reservations with a
+                minimum of 3 days in advance
+              </h3>
+              <Button variant="primary">Booking Now</Button>
+            </div>
           </Col>
         </Row>
       </div>

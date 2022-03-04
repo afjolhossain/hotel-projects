@@ -17,11 +17,11 @@ const Booking = () => {
   return (
     <div style={{ backgroundColor: "#F5B7B1" }}>
       <Navigation></Navigation>
-      <Row style={{ marginTop: "3rem", marginBottom: "3rem", padding: "3rem" }}>
-        <Col xs={12} md={6} style={{ width: "35rem", margin: "auto" }}>
-          <img style={{ width: "30rem" }} src={service.image} alt="" />
+      <Row xs={1} sm={2} md={3} style={{ padding: "2rem" }}>
+        <Col xs={12} md={6}>
+          <img style={{ width: "27rem" }} src={service.image} alt="" />
         </Col>
-        <Col xs={12} md={6} style={{ width: "35rem" }}>
+        <Col xs={12} md={6} style={{ width: "30rem" }}>
           <Card style={{ width: "30rem", height: "20rem", margin: "auto" }}>
             <ListGroup variant="flush" style={{ textAlign: "start" }}>
               <ListGroup.Item style={{ fontSize: "30px", color: "#6F0938 " }}>

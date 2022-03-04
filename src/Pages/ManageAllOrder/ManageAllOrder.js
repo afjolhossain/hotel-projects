@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
+import Footer from "../Shared/footer/Footer";
+import Navigation from "../Shared/Navigation/Navigation";
 
 const ManageAllOrder = () => {
   const [manageOrders, setManageOrders] = useState([]);
@@ -30,13 +32,14 @@ const ManageAllOrder = () => {
   };
   return (
     <div>
+      <Navigation></Navigation>
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -54,6 +57,7 @@ const ManageAllOrder = () => {
           ))}
         </tbody>
       </Table>
+      <Footer></Footer>
     </div>
   );
 };

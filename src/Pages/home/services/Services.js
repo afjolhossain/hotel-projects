@@ -16,7 +16,7 @@ const Services = () => {
         <h2 style={{ fontSize: "70px" }}>
           Our Best <span style={{ color: "#AA3E04" }}>Services For You</span>
         </h2>
-        <Row xs={1} sm={6} md={3} style={{ rowGap: "20px", marginTop: "5rem" }}>
+        <Row xs={1} sm={2} md={3} style={{ rowGap: "20px", marginTop: "5rem" }}>
           {services.map((service) => (
             <SingleService key={service._id} service={service}></SingleService>
           ))}

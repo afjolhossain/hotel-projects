@@ -29,10 +29,9 @@ const Login = () => {
     e.preventDefault();
   };
   return (
-    <div
-      style={{ margin: "auto", backgroundColor: "#85929E", height: "600px" }}
-    >
-      <Row style={{ marginTop: "1rem", marginBottom: "4rem" }}>
+    <div style={{ margin: "auto", backgroundColor: "#85929E" }}>
+      <Navigation></Navigation>
+      <Row style={{ padding: "1rem" }}>
         <Col sm={12} md={6}>
           <img
             style={{ width: "450px", height: "400px" }}
@@ -111,6 +110,7 @@ const Login = () => {
           )}
         </Col>
       </Row>
+      <Footer></Footer>
     </div>
   );
 };

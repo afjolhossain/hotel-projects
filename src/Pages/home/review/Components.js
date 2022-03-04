@@ -18,86 +18,104 @@ export default class AutoPlay extends Component {
     };
 
     return (
-      <Container className="conatiner" sx={12} sm={6} md={4}>
-        <h2 className="title">
-          <span style={{ color: "#AA3E04" }}>Our Clients are</span> Important to
-          Us
-        </h2>
-        <Slider {...settings}>
-          <div className="reviwe-client-div">
-            <img className="image" src={reviewPerson1} alt="" />
-            <div className="client-details">
-              <h4>
-                <span className="special-color">Name</span> : Shahed Ahmed
-              </h4>
-              <h5>
-                <span className="special-color">Profession</span> : Fontend
-                Developer
-              </h5>
-              <p>
-                <span className="special-color"> Comment : </span>
-                Fantastic location in a historic renovated monastery in the
-                heart of the Castro. Staff were helpful and knowledgeable and
-                everything in easy walking distance
-              </p>
+      <div style={{ marginBottom: "4rem" }}>
+        <Container>
+          <h2 className="title">
+            <span style={{ color: "#AA3E04" }}>Our Clients are</span> Important
+            to Us
+          </h2>
+          <Slider {...settings}>
+            <div className="reviwe-client-div">
+              <img className="image" src={reviewPerson1} alt="" />
+              <div className="client-details">
+                <h4>
+                  <span className="special-color">Name</span> : Shahed Ahmed
+                </h4>
+                <h5>
+                  <span className="special-color">Profession</span> : Fontend
+                  Developer
+                </h5>
+                <p
+                  style={{
+                    color: "#200503",
+                    padding: "5px",
+                  }}
+                >
+                  Fantastic location in a historic renovated monastery in the
+                  heart of the Castro. Staff were helpful and knowledgeable and
+                  everything in easy walking distance
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="reviwe-client-div">
-            <img className="image" src={reviewPerson1} alt="" />
-            <div className="client-details">
-              <h4>
-                <span className="special-color">Name</span> : Afjol Hossain
-              </h4>
-              <h5>
-                <span className="special-color">Profession</span> : Fontend
-                Developer
-              </h5>
-              <p>
-                <span className="special-color"> Comment : </span>
-                Fantastic location in a historic renovated monastery in the
-                heart of the Castro. Staff were helpful and knowledgeable and
-                everything in easy walking distance
-              </p>
+            <div className="reviwe-client-div">
+              <img className="image" src={reviewPerson1} alt="" />
+              <div className="client-details">
+                <h4>
+                  <span className="special-color">Name</span> : Afjol Hossain
+                </h4>
+                <h5>
+                  <span className="special-color">Profession</span> : Fontend
+                  Developer
+                </h5>
+                <p
+                  style={{
+                    color: "#200503",
+                    padding: "5px",
+                  }}
+                >
+                  Fantastic location in a historic renovated monastery in the
+                  heart of the Castro. Staff were helpful and knowledgeable and
+                  everything in easy walking distance
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="reviwe-client-div">
-            <img className="image" src={reviewPerson1} alt="" />
-            <div className="client-details">
-              <h4>
-                <span className="special-color">Name</span> : Shahed Ahmed
-              </h4>
-              <h5>
-                <span className="special-color">Profession</span> : Fontend
-                Developer
-              </h5>
-              <p>
-                <span className="special-color"> Comment : </span>
-                Fantastic location in a historic renovated monastery in the
-                heart of the Castro. Staff were helpful and knowledgeable and
-                everything in easy walking distance
-              </p>
+            <div className="reviwe-client-div">
+              <img className="image" src={reviewPerson1} alt="" />
+              <div className="client-details">
+                <h4>
+                  <span className="special-color">Name</span> : Shahed Ahmed
+                </h4>
+                <h5>
+                  <span className="special-color">Profession</span> : Fontend
+                  Developer
+                </h5>
+                <p
+                  style={{
+                    color: "#200503",
+                    padding: "5px",
+                  }}
+                >
+                  Fantastic location in a historic renovated monastery in the
+                  heart of the Castro. Staff were helpful and knowledgeable and
+                  everything in easy walking distance
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="reviwe-client-div">
-            <img className="image" src={reviewPerson1} alt="" />
-            <div className="client-details">
-              <h4>
-                <span className="special-color">Name</span> : Afjol Hossain
-              </h4>
-              <h5>
-                <span className="special-color">Profession</span> : Fontend
-                Developer
-              </h5>
-              <p>
-                <span className="special-color"> Comment : </span>
-                Fantastic location in a historic renovated monastery in the
-                heart of the Castro. Staff were helpful and knowledgeable and
-                everything in easy walking distance
-              </p>
+            <div className="reviwe-client-div">
+              <img className="image" src={reviewPerson1} alt="" />
+              <div className="client-details">
+                <h4>
+                  <span className="special-color">Name</span> : Afjol Hossain
+                </h4>
+                <h5>
+                  <span className="special-color">Profession</span> : Fontend
+                  Developer
+                </h5>
+                <p
+                  style={{
+                    color: "#200503",
+                    padding: "5px",
+                  }}
+                >
+                  Fantastic location in a historic renovated monastery in the
+                  heart of the Castro. Staff were helpful and knowledgeable and
+                  everything in easy walking distance
+                </p>
+              </div>
             </div>
-          </div>
-        </Slider>
-      </Container>
+          </Slider>
+        </Container>
+      </div>
     );
   }
 }
