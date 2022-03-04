@@ -36,11 +36,11 @@ const MyOrder = () => {
     }
   };
   return (
-    <>
+    <div>
       <Navigation></Navigation>
-      <Container>
+      <Container style={{ padding: "3rem" }}>
         <h1>My Order List</h1>
-        <Table striped bordered hover variant="dark">
+        <Table striped bordered hover variant="dark" responsive>
           <thead>
             <tr>
               <th>Email</th>
@@ -69,7 +69,7 @@ const MyOrder = () => {
         </Table>
       </Container>
       <Footer></Footer>
-    </>
+    </div>
   );
 };
 

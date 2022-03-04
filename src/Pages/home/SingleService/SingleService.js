@@ -8,7 +8,11 @@ const SingleService = ({ service }) => {
     <Row xs={12} md={4} lg={4} className="m-auto">
       <Col>
         <Card
-          style={{ width: "22rem", height: "25rem", borderRadius: "10px" }}
+          style={{
+            width: "22rem",
+            height: "25rem",
+            borderRadius: "10px",
+          }}
           className="m-auto"
         >
           <Card.Img

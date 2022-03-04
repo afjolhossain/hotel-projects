@@ -18,9 +18,9 @@ export default class AutoPlay extends Component {
     };
 
     return (
-      <div style={{ marginBottom: "4rem" }}>
+      <div style={{ marginBottom: "5rem" }}>
         <Container>
-          <h2 className="title">
+          <h2 className="title" style={{ marginTop: "2rem" }}>
             <span style={{ color: "#AA3E04" }}>Our Clients are</span> Important
             to Us
           </h2>

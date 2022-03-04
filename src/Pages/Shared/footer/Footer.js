@@ -1,12 +1,10 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import logo from "../../../images/Sylhet.png";
+import logo from "../../../images/Sylhet Hotel.png";
 
 const Footer = () => {
   return (
-    <Card className="bg-black">
-      <Card.Header>Featured</Card.Header>
-
+    <Card style={{ backgroundColor: "#2f4f4f" }}>
       <Card.Body>
         <div className="container" sm>
           <div className="row" style={{ color: "white" }}>
@@ -15,7 +13,11 @@ const Footer = () => {
                 With supporting text below as a natural lead-in to additional
                 content.
               </Card.Text>
-              <img style={{ width: "200px" }} src={logo} alt="" />
+              <img
+                style={{ width: "140px", height: "100px" }}
+                src={logo}
+                alt=""
+              />
             </div>
             <div className="col text-start">
               <Card.Title>General</Card.Title>

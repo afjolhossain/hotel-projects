@@ -31,7 +31,7 @@ const ManageAllOrder = () => {
     }
   };
   return (
-    <div>
+    <div style={{ margin: "auto" }}>
       <Navigation></Navigation>
       <Table striped bordered hover>
         <thead>

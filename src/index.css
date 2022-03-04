@@ -24,10 +24,10 @@ html {
   overflow-x: hidden;
 }
 html::-webkit-scrollbar {
-  width: 1.4rem;
+  width: 1.2rem;
 }
 html::-webkit-scrollbar {
-  width: 1.4rem;
+  width: 1.2rem;
 }
 
 html::-webkit-scrollbar-track {

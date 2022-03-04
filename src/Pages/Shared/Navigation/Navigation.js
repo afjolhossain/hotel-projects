@@ -1,14 +1,14 @@
 import React from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
-import hotelLogo from "../../../images/Sylhet.png";
+import hotelLogo from "../../../images/Sylhet Hotel.png";
 
 const Navigation = () => {
   const { user, logOut } = useAuth();
   return (
     <Navbar
-      style={{ backgroundColor: "#AB3A57" }}
+      style={{ backgroundColor: "#2f4f4f" }}
       variant="light"
       collapseOnSelect
       expand="lg"
@@ -24,6 +24,17 @@ const Navigation = () => {
         <div>
           <Navbar.Toggle />
           <Navbar.Collapse>
+            <NavLink
+              style={{
+                textDecoration: "none",
+                fontSize: "20px",
+                marginRight: "1rem",
+                color: "white",
+              }}
+              to="/home"
+            >
+              Home
+            </NavLink>
             <NavLink
               style={{
                 textDecoration: "none",
@@ -70,7 +81,17 @@ const Navigation = () => {
                   fontWeight: "700px",
                 }}
               >
-                <Button variant="secondary"> Login</Button>
+                <Button
+                  style={{
+                    backgroundColor: "#2f4f4f",
+                    fontSize: "20px",
+                    marginRight: "1rem",
+                    color: "white",
+                  }}
+                  variant="#2f4f4f"
+                >
+                  Login
+                </Button>
               </NavLink>
             )}
             <Navbar.Text
