@@ -6,14 +6,15 @@ const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://pure-shore-34277.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
   return (
-    <div style={{ backgroundColor: "#F2F4F4" }}>
+    <div style={{ backgroundColor: "#AEB6BF" }}>
       <Container>
-        <h2 style={{ fontSize: "70px", marginTop: "3rem" }}>
+        <br />
+        <h2 style={{ fontSize: "40px", marginTop: "30px" }}>
           Our Best <span style={{ color: "#AA3E04" }}>Services For You</span>
         </h2>
         <Row xs={1} sm={2} md={3} style={{ rowGap: "20px", marginTop: "3rem" }}>

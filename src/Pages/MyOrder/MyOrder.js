@@ -11,7 +11,7 @@ const MyOrder = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    const url = `http://localhost:5000/orders`;
+    const url = `https://pure-shore-34277.herokuapp.com/orders`;
 
     fetch(url)
       .then((res) => res.json())
@@ -22,7 +22,7 @@ const MyOrder = () => {
     console.log(id);
     const confirm = window.confirm("Are you sure about this ?");
     if (confirm) {
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`https://pure-shore-34277.herokuapp.com/orders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -38,7 +38,7 @@ const MyOrder = () => {
   return (
     <div>
       <Navigation></Navigation>
-      <Container style={{ padding: "3rem" }}>
+      <Container>
         <h1>My Order List</h1>
         <Table striped bordered hover variant="dark" responsive>
           <thead>

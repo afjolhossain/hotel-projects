@@ -1,99 +1,58 @@
 import React from "react";
-import { Button, Container, Navbar } from "react-bootstrap";
+import { Button, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
-import hotelLogo from "../../../images/Sylhet Hotel.png";
+import "./Navigation.css";
 
 const Navigation = () => {
   const { user, logOut } = useAuth();
   return (
-    <Navbar
-      style={{ backgroundColor: "#2f4f4f" }}
-      variant="light"
-      collapseOnSelect
-      expand="lg"
-    >
-      <Container style={{ justifyContent: "between" }}>
-        <div>
-          <img
-            style={{ width: "80px", height: "50px" }}
-            src={hotelLogo}
-            alt=""
-          />
-        </div>
-        <div>
-          <Navbar.Toggle />
-          <Navbar.Collapse>
+    <Navbar style={{ backgroundColor: "#2f4f4f" }} expand="lg">
+      <>
+        <Navbar.Brand
+          href="#home"
+          style={{ color: "white", marginLeft: "100px", fontSize: "25px" }}
+        >
+          Sylhet <span style={{ color: "chocolate" }}>Hotel</span>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav style={{ margin: "auto" }}>
             <NavLink
-              style={{
-                textDecoration: "none",
-                fontSize: "20px",
-                marginRight: "1rem",
-                color: "white",
-              }}
+              className="navigation-Navlink"
               to="/home"
+              style={{ marginLeft: "100px" }}
             >
               Home
             </NavLink>
-            <NavLink
-              style={{
-                textDecoration: "none",
-                fontSize: "20px",
-                marginRight: "1rem",
-                color: "white",
-              }}
-              to="/addService"
-            >
+            <NavLink className="navigation-Navlink" to="/addService">
               Add-Service
             </NavLink>
-            <NavLink
-              style={{
-                textDecoration: "none",
-                fontSize: "20px",
-                marginRight: "1rem",
-                color: "white",
-              }}
-              to="/myOrder"
-            >
+            <NavLink className="navigation-Navlink" to="/myOrder">
               My-Order
             </NavLink>
-            <NavLink
-              style={{
-                textDecoration: "none",
-                fontSize: "20px",
-                marginRight: "1rem",
-                color: "white",
-              }}
-              to="/manageAllOrder"
-            >
+            <NavLink className="navigation-Navlink" to="/manageAllOrder">
               Manage-All-Order
             </NavLink>
-            {user?.email ? (
-              <Button onClick={logOut} variant="secondary">
-                LogOut
-              </Button>
-            ) : (
-              <NavLink
-                to="/login"
-                style={{
-                  color: "black",
-                  fontSize: "20px",
-                  fontWeight: "700px",
-                }}
-              >
-                <Button
-                  style={{
-                    backgroundColor: "#2f4f4f",
-                    fontSize: "20px",
-                    marginRight: "1rem",
-                    color: "white",
-                  }}
-                  variant="#2f4f4f"
-                >
-                  Login
+            <div style={{ margin: "auto" }}>
+              {user?.email ? (
+                <Button className="loginButton" onClick={logOut}>
+                  LogOut
                 </Button>
-              </NavLink>
-            )}
+              ) : (
+                <NavLink to="/login" className="loginButton">
+                  <button
+                    className="loginButton"
+                    style={{
+                      backgroundColor: "#2f4f4f",
+                    }}
+                  >
+                    Login
+                  </button>
+                </NavLink>
+              )}
+            </div>
+
             <Navbar.Text
               style={{ color: "black", fontSize: "25px", fontWeight: "700px" }}
             >
@@ -101,9 +60,9 @@ const Navigation = () => {
                 {user.displayName}
               </a>
             </Navbar.Text>
-          </Navbar.Collapse>
-        </div>
-      </Container>
+          </Nav>
+        </Navbar.Collapse>
+      </>
     </Navbar>
   );
 };

@@ -23,15 +23,18 @@ const useFirebase = () => {
   const auth = getAuth();
 
   //   --------------------RegisterUser--------------------------
-  const registerUser = (email, password, navigate) => {
+  const registerUser = (email, password, navigate, location) => {
     setIsloading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
+        const destination = location?.state?.from || "/";
+        navigate(destination);
         setAuthError("");
-        navigate("/");
       })
+
       .catch((error) => {
         setAuthError(error.message);
+        navigate("/");
       })
       .finally(() => setIsloading(false));
   };

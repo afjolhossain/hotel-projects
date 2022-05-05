@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import banner1 from "../../../images/banner-4.jpg";
+import banner1 from "../../../images/banner-1.jpg";
 import banner2 from "../../../images/ralph-ravi-kayden.jpg";
 import banner3 from "../../../images/vojtech-bruzek.jpg";
 
@@ -19,8 +19,7 @@ const Banner = () => {
             style={{
               fontWeight: "700px",
               fontSize: "60px",
-              color: "#cd5c5c ",
-              marginBottom: "12rem",
+              color: "white",
             }}
           >
             "Welcome To Sylhet Hotel & Restaurant"
@@ -40,8 +39,7 @@ const Banner = () => {
             style={{
               fontWeight: "700px",
               fontSize: "60px",
-              color: "#4b0082",
-              marginBottom: "12rem",
+              color: "black",
             }}
           >
             Make Your Stay Memorable
@@ -61,8 +59,7 @@ const Banner = () => {
             style={{
               fontWeight: "700px",
               fontSize: "60px",
-              color: "#778899",
-              marginBottom: "12rem",
+              color: "white",
             }}
           >
             Make Your Stay Memorable

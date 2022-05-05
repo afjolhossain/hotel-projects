@@ -6,7 +6,7 @@ const SingleService = ({ service }) => {
   const { _id, name, description, image, price } = service;
   return (
     <Row xs={12} md={4} lg={4} className="m-auto">
-      <Col>
+      <Col style={{ marginBottom: "35px" }}>
         <Card
           style={{
             width: "22rem",
@@ -28,7 +28,7 @@ const SingleService = ({ service }) => {
             <Card.Title className="text-start"> Price: {price} BDT</Card.Title>
           </Card.Body>
           <Link to={`/booking/${_id}`}>
-            <Button style={{ width: "22rem" }} variant="primary">
+            <Button style={{ width: "22rem", backgroundColor: "#7B241C " }}>
               Booking Now
             </Button>
           </Link>

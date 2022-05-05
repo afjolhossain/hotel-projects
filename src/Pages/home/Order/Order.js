@@ -13,7 +13,7 @@ const Order = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/orders", {
+    fetch("https://pure-shore-34277.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -30,16 +30,19 @@ const Order = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#5D6D7E " }}>
+    <div style={{ backgroundColor: "#E5E7E9" }}>
       <Navigation></Navigation>
-      <h1>Order Your Product</h1>
+      <h1 style={{ marginTop: "30px", color: "#C94463 " }}>
+        Order Your Product
+      </h1>
       <form
         style={{
-          width: "500px",
+          width: "450px",
           height: "350px",
           margin: "auto",
+          marginTop: "20px",
           marginBottom: "5rem",
-          backgroundColor: "#F5B7B1",
+          backgroundColor: "#2C3E50",
         }}
         className="shipping-form "
         onSubmit={handleSubmit(onSubmit)}
@@ -47,7 +50,7 @@ const Order = () => {
         <input
           style={{ width: "20rem", marginTop: "1.5rem", height: "3rem" }}
           defaultValue={user.displayName}
-          {...register("name")}
+          {...register("name", { required: true })}
         />
         <br />
         <input

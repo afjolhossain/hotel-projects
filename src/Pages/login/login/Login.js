@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Alert, Button, Col, Form, Row, Spinner } from "react-bootstrap";
-import loginpage from "../../../images/banner-4.jpg";
+import { Alert, Button, Container, Form, Row, Spinner } from "react-bootstrap";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import Navigation from "../../Shared/Navigation/Navigation";
 import Footer from "../../Shared/footer/Footer";
+import { FaUserCircle } from "react-icons/fa";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
@@ -29,87 +29,106 @@ const Login = () => {
     e.preventDefault();
   };
   return (
-    <div style={{ margin: "auto", backgroundColor: "#85929E" }}>
+    <div style={{ margin: "auto", backgroundColor: "#424949" }}>
       <Navigation></Navigation>
-      <Row style={{ padding: "1rem" }}>
-        <Col sm={12} md={6}>
-          <img
-            style={{ width: "450px", height: "400px" }}
-            src={loginpage}
-            alt=""
-          />
-        </Col>
-        <Col sm={12} md={6}>
-          {!isLoading && (
-            <Form
-              onSubmit={handleLoginSubmit}
+      <Container style={{ padding: "1rem" }}>
+        {!isLoading && (
+          <Form
+            onSubmit={handleLoginSubmit}
+            style={{
+              width: "400px",
+              height: "450px",
+              borderRadius: "10px",
+              margin: "0 auto",
+              backgroundColor: "#FBFCFC ",
+            }}
+          >
+            <br />
+            <h3
               style={{
-                width: "450px",
-                height: "400px",
-                backgroundColor: "#081B4E ",
+                fontSize: "25px",
               }}
             >
-              <h2 style={{ fontSize: "30px", color: "#EA510E" }}>Login</h2>
-              <Form.Group className="mb-3">
-                <Form.Control
-                  style={{ width: "400px", margin: "auto" }}
-                  type="email"
-                  name="email"
-                  onChange={handleOnChange}
-                  placeholder="Enter email"
-                />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Control
-                  type="password"
-                  name="password"
-                  onChange={handleOnChange}
-                  style={{ width: "400px", margin: "auto" }}
-                  placeholder="Password"
-                />
-              </Form.Group>
+              Sylhet <span style={{ color: "chocolate" }}>Hotel</span>
+            </h3>
+            <FaUserCircle style={{ fontSize: "40px" }}></FaUserCircle>
+            <br />
+            <br />
+            <Form.Group className="mb-3">
+              <Form.Control
+                style={{ width: "350px", height: "50px", margin: "auto" }}
+                type="email"
+                name="email"
+                onChange={handleOnChange}
+                placeholder="Enter email"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Control
+                type="password"
+                name="password"
+                onChange={handleOnChange}
+                style={{
+                  width: "350px",
+                  margin: "auto",
+                  height: "50px",
+                }}
+                placeholder="Password"
+              />
+            </Form.Group>
+            <Button
+              style={{
+                width: "350px",
+                height: "50px",
+                backgroundColor: "#422930",
+              }}
+              type="submit"
+            >
+              Login
+            </Button>
+            <br />
+            <Form.Text className="text-muted" style={{ fontSize: "20px" }}>
+              --------------------OR------------------
+            </Form.Text>
+            <Button
+              onClick={handleGoogleSignIn}
+              style={{
+                width: "350px",
+                height: "50px",
+                backgroundColor: "#422930",
+              }}
+              type="submit"
+            >
+              Sign-In-Google
+            </Button>
+            <NavLink style={{ textDecoration: "none" }} to="/register">
               <Button
-                variant="primary"
-                style={{ width: "400px" }}
-                type="submit"
+                style={{ color: "#EA510E", fontWeight: 700 }}
+                variant="text"
               >
-                Login
+                New User? Please Register
               </Button>
-              <br />
-              <Form.Text className="text-muted" style={{ fontSize: "20px" }}>
-                ------------------------OR----------------------
-              </Form.Text>
-              <Button
-                onClick={handleGoogleSignIn}
-                variant="primary"
-                style={{ width: "400px" }}
-                type="submit"
-              >
-                Sign-In-Google
-              </Button>
-              <NavLink style={{ textDecoration: "none" }} to="/register">
-                <Button
-                  style={{ color: "#EA510E", fontWeight: 700 }}
-                  variant="text"
-                >
-                  New User? Please Register
-                </Button>
-              </NavLink>
-            </Form>
-          )}
-          {isLoading && <Spinner animation="border" variant="primary" />}
-          {user?.email && (
-            <Alert style={{ width: "440px" }} variant="success">
-              Logged Successfully.
-            </Alert>
-          )}
-          {authError && (
-            <Alert style={{ width: "450px" }} variant="warning">
-              {authError}
-            </Alert>
-          )}
-        </Col>
-      </Row>
+            </NavLink>
+          </Form>
+        )}
+        {isLoading && <Spinner animation="border" variant="primary" />}
+        {user?.email && (
+          <Alert
+            style={{ width: "350px", height: "50px", margin: "auto" }}
+            variant="success"
+          >
+            Logged Successfully.
+          </Alert>
+        )}
+        {authError && (
+          <Alert
+            style={{ width: "350px", height: "50px", margin: "auto" }}
+            variant="warning"
+          >
+            {authError}
+          </Alert>
+        )}
+      </Container>
       <Footer></Footer>
     </div>
   );

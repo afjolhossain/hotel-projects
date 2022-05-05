@@ -1,0 +1,17 @@
+.navigation-Navlink {
+  text-decoration: none;
+  font-size: 25px;
+  margin-left: 25px;
+  color: antiquewhite;
+}
+.navigation-Navlink:hover {
+  color: chocolate;
+}
+.loginButton {
+  font-size: 25px;
+  margin-left: 50px;
+  color: rgb(223, 233, 223);
+}
+.loginButton:hover {
+  color: rgb(218, 180, 28);
+}

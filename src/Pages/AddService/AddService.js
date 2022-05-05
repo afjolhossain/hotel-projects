@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+import Footer from "../Shared/footer/Footer";
+import Navigation from "../Shared/Navigation/Navigation";
 
 const AddService = () => {
   const nameref = useRef();
@@ -14,7 +16,7 @@ const AddService = () => {
 
     const newService = { name, description, price, image };
 
-    fetch("http://localhost:5000/services", {
+    fetch("https://pure-shore-34277.herokuapp.com/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -32,29 +34,46 @@ const AddService = () => {
     e.eventDefault();
   };
   return (
-    <div>
-      <h3>ADD A SERVICE</h3>
+    <div style={{ backgroundColor: "#D5D8DC" }}>
+      <Navigation></Navigation>
+      <br />
       <form
+        sx={12}
         onSubmit={handleAddService}
         style={{
-          border: "5px solid black",
+          border: "2px solid black",
           width: 400,
-          height: 350,
+          marginBottom: "5px",
+          height: 400,
           borderRadius: "10px",
-          margin: "auto",
-          backgroundColor: "#1BBB97",
+          margin: "0 auto",
+          backgroundColor: "#212F3D",
         }}
       >
+        <br />
+        <h3 style={{ color: "#D35400" }}>ADD A SERVICE</h3>
         <input
           type="text"
-          style={{ width: "300px", height: 30, marginTop: 15 }}
+          style={{
+            width: "350px",
+            height: 50,
+            borderRadius: "6px",
+            marginTop: 15,
+            backgroundColor: "#CACFD2",
+          }}
           placeholder="Service Name"
           ref={nameref}
         />
         <br />
         <input
           type="text"
-          style={{ width: "300px", height: 30, marginTop: 10 }}
+          style={{
+            width: "350px",
+            height: 50,
+            borderRadius: "6px",
+            marginTop: 10,
+            backgroundColor: "#CACFD2",
+          }}
           placeholder="Image-Url"
           ref={imageref}
         />
@@ -62,7 +81,13 @@ const AddService = () => {
 
         <input
           type="text"
-          style={{ width: "300px", height: 30, marginTop: 10 }}
+          style={{
+            width: "350px",
+            height: 50,
+            borderRadius: "6px",
+            marginTop: 10,
+            backgroundColor: "#CACFD2",
+          }}
           placeholder="Description"
           ref={descriptionref}
         />
@@ -70,26 +95,31 @@ const AddService = () => {
         <input
           type="number"
           style={{
-            width: "300px",
-            height: 30,
+            width: "350px",
+            height: 50,
+            borderRadius: "6px",
             marginTop: 10,
+            backgroundColor: "#CACFD2",
           }}
           placeholder="Price"
           ref={priceref}
         />
         <br />
-
         <input
           type="submit"
           style={{
-            width: "310px",
-            height: 40,
+            width: "350px",
+            height: 50,
             marginTop: 10,
-            backgroundColor: "#E2220C",
+            borderRadius: "6px",
+            backgroundColor: "#D35400",
           }}
           value="SUBMIT"
         />
       </form>
+      <br />
+
+      <Footer></Footer>
     </div>
   );
 };
