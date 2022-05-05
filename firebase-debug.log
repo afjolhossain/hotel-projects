@@ -1,0 +1,107 @@
+[debug] [2022-05-05T14:12:09.237Z] ----------------------------------------------------------------------
+[debug] [2022-05-05T14:12:09.239Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\afjol\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-05-05T14:12:09.240Z] CLI Version:   10.0.1
+[debug] [2022-05-05T14:12:09.240Z] Platform:      win32
+[debug] [2022-05-05T14:12:09.240Z] Node Version:  v16.13.0
+[debug] [2022-05-05T14:12:09.241Z] Time:          Thu May 05 2022 20:12:09 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-05-05T14:12:09.242Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-05T14:12:09.311Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-05T14:12:09.311Z] > authorizing via signed-in user (afjolhossain020@gmail.com)
+[debug] [2022-05-05T14:12:09.311Z] [iam] checking project hotel-projects-b296b for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-05-05T14:12:09.316Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/hotel-projects-b296b:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-05-05T14:12:11.146Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 05 May 2022 14:12:11 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1154","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-05T14:12:11.150Z] > refreshing access token with scopes: []
+[debug] [2022-05-05T14:12:11.150Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-05-05T14:12:11.604Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 05 May 2022 14:12:12 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-05T14:12:11.639Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hotel-projects-b296b [none]
+[debug] [2022-05-05T14:12:14.878Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hotel-projects-b296b 200
+[debug] [2022-05-05T14:12:14.879Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hotel-projects-b296b {"projectId":"hotel-projects-b296b","projectNumber":"522588489256","displayName":"hotel-projects","name":"projects/hotel-projects-b296b","resources":{"hostingSite":"hotel-projects-b296b"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'hotel-projects-b296b'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-05-05T14:12:14.902Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-05-05T14:12:14.903Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-05-05T14:12:15.359Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Thu, 05 May 2022 14:12:15 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-05T14:12:15.392Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/hotel-projects-b296b/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-05-05T14:12:17.330Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 05 May 2022 14:12:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[hotel-projects-b296b]: beginning deploy... 
+[info] i  hosting[hotel-projects-b296b]: found 25 files in build 
+[debug] [2022-05-05T14:12:17.916Z] > refreshing access token with scopes: []
+[debug] [2022-05-05T14:12:17.917Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-05-05T14:12:17.919Z] [hosting] hash cache [YnVpbGQ] stored for 25 files
+[debug] [2022-05-05T14:12:17.919Z] [hosting][hash queue][FINAL] {"max":464,"min":32,"avg":85.56,"active":0,"complete":25,"success":25,"errored":0,"retried":0,"total":25,"elapsed":493}
+[debug] [2022-05-05T14:12:18.350Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 05 May 2022 14:12:18 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-05T14:12:18.381Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3:populateFiles [none]
+[debug] [2022-05-05T14:12:18.381Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3:populateFiles {"files":{"/fakeadata.json":"a38fa0996cd07e4d91740827f4deb891dd788dad0a2c6ea85794d6839abdff77","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/asset-manifest.json":"10e7167a455d32e1f26bbdb00de3a01595a8e4fa1e1ed91374724ec4d8e3c5dd","/index.html":"8210219c7a26d9577938b5c0c749b736f4723c9439a40b66c46a692b19f43261","/static/js/787.4e7014b8.chunk.js":"b931c0036b85ae5d9718408cefa151732a46084f09794fd65618acd54a657808","/static/js/787.4e7014b8.chunk.js.map":"fd52d94e8a9a67a960fc0ec71eaf644c26d2053e6c87134bfd814053d866ce76","/static/js/main.b0c9b685.js.LICENSE.txt":"675278fc12b07bff068d3a30e11995a810ee26c00c25b81a3343e3d3f2ef018f","/static/media/slick.2630a3e3eab21c607e21.svg":"d00477d40ed40fa1dd3bdee27d9286804121b15fea83bae7d5415d902b055de0","/static/media/slick.295183786cd8a1389865.woff":"029a727c9e1081d2f9e1015f02f18da88f268512ea4f58589a6f17f532928530","/static/media/slick.a4e97f5a2a64f0ab1323.eot":"52b9a169969e053d43df6bd21c4dc789c2518d99afd8590a17ef50cd24c77cf6","/static/media/slick.c94f7671dcc99dce43e2.ttf":"6aad751007cf9a89350af287f824ab64f096c472c7c9c679fb3d55b6174fc004","/static/css/main.6019c4c1.css":"426eb8096b7ffc470e03594b3827df36b8a7b9f946d5de9a90adcf17c3eeef5d","/static/media/Sylhet Hotel.d826fad78e1a0d5996a1.png":"969d57929da1aaf0691ef54d1424a5f394eb570fd0c0f97bf5e858574e4467dd","/static/media/afjol hossain.7cebac83d48bcb54626b.JPG":"586f2b85e3f8449a25536a2a834e9ea09e153f44980d195b52beb13618716d59","/static/css/main.6019c4c1.css.map":"36c1d2d524c9fedc462f5e9ab6c131ddb1ac1a72117c01a7b97ee6e5393cfdc6","/static/js/main.b0c9b685.js":"10bb9c899aeb9a12f6e2e1a28d440a8b1f8ee6757cd70a1d12b722460a5c6b7a","/static/media/ralph-ravi-kayden.2199d19739632a90d385.jpg":"6ae727ac3c9a1e5e5e09fdf54ff5b18b6afbc7fb134b17faaf2e31fde62a9579","/static/media/vojtech-bruzek.bda287598ee1497ce86e.jpg":"f77fa24a4c764866ece8f99f909e16615c21297dd953fd909585a9549d55199c","/static/media/banner-1.4d76c7157caa75a0269c.jpg":"4062504dd8b0d2d73c51b8e2891fa0fc4e2a81cba39abd2e75288071313d1327","/static/media/offer.eed8d7c0ad84a652606b.jpg":"d6cce6505f214b6f2a7798b1c831bec17fdc75833f0ec1ad581b5130ad53738b","/static/js/main.b0c9b685.js.map":"e3ae35ad8a2ea27df0fbf4f8b4b9983bc698e9f743199ca16dc2795ec034ec7f"}}
+[debug] [2022-05-05T14:12:20.119Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3:populateFiles 200
+[debug] [2022-05-05T14:12:20.120Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3:populateFiles {"uploadRequiredHashes":["10bb9c899aeb9a12f6e2e1a28d440a8b1f8ee6757cd70a1d12b722460a5c6b7a","e3ae35ad8a2ea27df0fbf4f8b4b9983bc698e9f743199ca16dc2795ec034ec7f","8210219c7a26d9577938b5c0c749b736f4723c9439a40b66c46a692b19f43261","10e7167a455d32e1f26bbdb00de3a01595a8e4fa1e1ed91374724ec4d8e3c5dd"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files"}
+[debug] [2022-05-05T14:12:20.127Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/10bb9c899aeb9a12f6e2e1a28d440a8b1f8ee6757cd70a1d12b722460a5c6b7a [none]
+[debug] [2022-05-05T14:12:20.128Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/10bb9c899aeb9a12f6e2e1a28d440a8b1f8ee6757cd70a1d12b722460a5c6b7a [stream]
+[debug] [2022-05-05T14:12:20.136Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/e3ae35ad8a2ea27df0fbf4f8b4b9983bc698e9f743199ca16dc2795ec034ec7f [none]
+[debug] [2022-05-05T14:12:20.137Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/e3ae35ad8a2ea27df0fbf4f8b4b9983bc698e9f743199ca16dc2795ec034ec7f [stream]
+[debug] [2022-05-05T14:12:20.145Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/8210219c7a26d9577938b5c0c749b736f4723c9439a40b66c46a692b19f43261 [none]
+[debug] [2022-05-05T14:12:20.146Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/8210219c7a26d9577938b5c0c749b736f4723c9439a40b66c46a692b19f43261 [stream]
+[debug] [2022-05-05T14:12:20.152Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/10e7167a455d32e1f26bbdb00de3a01595a8e4fa1e1ed91374724ec4d8e3c5dd [none]
+[debug] [2022-05-05T14:12:20.152Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/10e7167a455d32e1f26bbdb00de3a01595a8e4fa1e1ed91374724ec4d8e3c5dd [stream]
+[debug] [2022-05-05T14:12:20.156Z] [hosting][populate queue][FINAL] {"max":2211,"min":2211,"avg":2211,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2240}
+[debug] [2022-05-05T14:12:20.156Z] [hosting] uploads queued: 4
+[debug] [2022-05-05T14:12:22.012Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/10e7167a455d32e1f26bbdb00de3a01595a8e4fa1e1ed91374724ec4d8e3c5dd 200
+[debug] [2022-05-05T14:12:22.013Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/10e7167a455d32e1f26bbdb00de3a01595a8e4fa1e1ed91374724ec4d8e3c5dd [stream]
+[debug] [2022-05-05T14:12:22.122Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/8210219c7a26d9577938b5c0c749b736f4723c9439a40b66c46a692b19f43261 200
+[debug] [2022-05-05T14:12:22.123Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/8210219c7a26d9577938b5c0c749b736f4723c9439a40b66c46a692b19f43261 [stream]
+[debug] [2022-05-05T14:12:22.176Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/10bb9c899aeb9a12f6e2e1a28d440a8b1f8ee6757cd70a1d12b722460a5c6b7a 200
+[debug] [2022-05-05T14:12:22.178Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/10bb9c899aeb9a12f6e2e1a28d440a8b1f8ee6757cd70a1d12b722460a5c6b7a [stream]
+[debug] [2022-05-05T14:12:24.194Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/e3ae35ad8a2ea27df0fbf4f8b4b9983bc698e9f743199ca16dc2795ec034ec7f 200
+[debug] [2022-05-05T14:12:24.195Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3/files/e3ae35ad8a2ea27df0fbf4f8b4b9983bc698e9f743199ca16dc2795ec034ec7f [stream]
+[debug] [2022-05-05T14:12:24.197Z] [hosting][upload queue][FINAL] {"max":4075,"min":1888,"avg":2505.25,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":4076}
+[info] +  hosting[hotel-projects-b296b]: file upload complete 
+[debug] [2022-05-05T14:12:24.205Z] [hosting] deploy completed after 6870ms
+[debug] [2022-05-05T14:12:24.220Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "hotel-projects-b296b"
+    },
+    "site": "hotel-projects-b296b",
+    "version": "sites/hotel-projects-b296b/versions/75bc41f3e648b2c3"
+  }
+]
+[info] i  hosting[hotel-projects-b296b]: finalizing version... 
+[debug] [2022-05-05T14:12:24.224Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-05-05T14:12:24.225Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-05-05T14:12:24.699Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 05 May 2022 14:12:25 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-05T14:12:24.729Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/hotel-projects-b296b/versions/75bc41f3e648b2c3?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2022-05-05T14:12:26.363Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 05 May 2022 14:12:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-05T14:12:26.364Z] [hosting] finalized version for hotel-projects-b296b: {"name":"sites/hotel-projects-b296b/versions/75bc41f3e648b2c3","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-05-05T14:12:17.565584Z","createUser":{"email":"afjolhossain020@gmail.com"},"finalizeTime":"2022-05-05T14:12:26.802841Z","finalizeUser":{"email":"afjolhossain020@gmail.com"}}
+[info] +  hosting[hotel-projects-b296b]: version finalized 
+[info] i  hosting[hotel-projects-b296b]: releasing new version... 
+[debug] [2022-05-05T14:12:26.367Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/hotel-projects-b296b/releases?version_name=sites/hotel-projects-b296b/versions/75bc41f3e648b2c3  
+ {"message":null}
+[debug] [2022-05-05T14:12:28.029Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 05 May 2022 14:12:28 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-05-05T14:12:28.030Z] [hosting] release: {"name":"sites/hotel-projects-b296b/releases/1651759947866271","version":{"name":"sites/hotel-projects-b296b/versions/75bc41f3e648b2c3","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-05-05T14:12:17.565584Z","createUser":{"email":"afjolhossain020@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GimECk1zTJWJ0rpVpf7JQpi8ISJNSr8t_-IRxeG"},"finalizeTime":"2022-05-05T14:12:26.802841Z","finalizeUser":{"email":"afjolhossain020@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GimECk1zTJWJ0rpVpf7JQpi8ISJNSr8t_-IRxeG"}},"type":"DEPLOY","releaseTime":"2022-05-05T14:12:27.866271585Z","releaseUser":{"email":"afjolhossain020@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AOh14GimECk1zTJWJ0rpVpf7JQpi8ISJNSr8t_-IRxeG"}}
+[info] +  hosting[hotel-projects-b296b]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/hotel-projects-b296b/overview
+[info] Hosting URL: https://hotel-projects-b296b.web.app

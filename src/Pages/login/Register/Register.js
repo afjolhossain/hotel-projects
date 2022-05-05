@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Alert, Button, Container, Form, Spinner } from "react-bootstrap";
 import Navigation from "../../Shared/Navigation/Navigation";
 import Footer from "../../Shared/footer/Footer";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import { FaUserCircle } from "react-icons/fa";
 
@@ -10,10 +10,11 @@ const Register = () => {
   const [loginData, setLoginData] = useState({});
   const { registerUser, isLoading, user, authError, signInGoogle } = useAuth();
 
+  const location = useLocation();
   const navigate = useNavigate();
 
   const handleGoogleSignIn = () => {
-    signInGoogle(navigate);
+    signInGoogle(location, navigate);
   };
 
   const handleOnChange = (e) => {
