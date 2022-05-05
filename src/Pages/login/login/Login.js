@@ -25,7 +25,7 @@ const Login = () => {
     signInGoogle(location, navigate);
   };
   const handleLoginSubmit = (e) => {
-    loginUser(loginData.email, loginData.password, location, navigate);
+    loginUser(loginData.email, loginData.password);
     e.preventDefault();
   };
   return (

@@ -14,21 +14,17 @@ import {
 initializeFirebase();
 
 const googleProvider = new GoogleAuthProvider();
-
+const auth = getAuth();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsloading] = useState(true);
   const [authError, setAuthError] = useState("");
 
-  const auth = getAuth();
-
   //   --------------------RegisterUser--------------------------
-  const registerUser = (email, password, navigate, location) => {
+  const registerUser = (email, password, navigate) => {
     setIsloading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        const destination = location?.state?.from || "/";
-        navigate(destination);
         setAuthError("");
       })
 
@@ -87,12 +83,8 @@ const useFirebase = () => {
   const logOut = () => {
     setIsloading(true);
     signOut(auth)
-      .then(() => {
-        // Sign-out successful.
-      })
-      .catch((error) => {
-        // An error happened.
-      })
+      .then(() => {})
+      .catch((error) => {})
       .finally(() => setIsloading(false));
   };
 
