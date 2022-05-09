@@ -19,10 +19,15 @@ const Banner = () => {
             style={{
               fontWeight: "700px",
               fontSize: "60px",
-              color: "white",
+              color: "#8E1448  ",
             }}
           >
-            "Welcome To Sylhet Hotel & Restaurant"
+            "Welcome To
+            <span style={{ color: "#EAA812 " }}>
+              <br />
+              Sylhet Hotel & Restaurant
+            </span>
+            "
           </h1>
         </Carousel.Caption>
       </Carousel.Item>
@@ -39,7 +44,7 @@ const Banner = () => {
             style={{
               fontWeight: "700px",
               fontSize: "60px",
-              color: "black",
+              color: "#20064D ",
             }}
           >
             Make Your Stay Memorable

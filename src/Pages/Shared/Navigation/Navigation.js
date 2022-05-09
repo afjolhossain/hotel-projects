@@ -9,20 +9,13 @@ const Navigation = () => {
   return (
     <Navbar style={{ backgroundColor: "#2f4f4f" }} expand="lg">
       <>
-        <Navbar.Brand
-          href="#home"
-          style={{ color: "white", marginLeft: "100px", fontSize: "25px" }}
-        >
+        <Navbar.Brand href="#home" style={{ color: "white", fontSize: "25px" }}>
           Sylhet <span style={{ color: "chocolate" }}>Hotel</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav style={{ margin: "auto" }}>
-            <NavLink
-              className="navigation-Navlink"
-              to="/home"
-              style={{ marginLeft: "100px" }}
-            >
+            <NavLink className="navigation-Navlink" to="/home">
               Home
             </NavLink>
             <NavLink className="navigation-Navlink" to="/addService">

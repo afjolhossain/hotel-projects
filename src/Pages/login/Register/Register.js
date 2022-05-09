@@ -113,7 +113,6 @@ const Register = () => {
                 height: "50px",
                 backgroundColor: "#230209 ",
               }}
-              type="submit"
             >
               Sign-In-Google
             </Button>

@@ -7,6 +7,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   GoogleAuthProvider,
+  updateProfile,
   signInWithPopup,
 } from "firebase/auth";
 
@@ -14,27 +15,33 @@ import {
 initializeFirebase();
 
 const googleProvider = new GoogleAuthProvider();
-const auth = getAuth();
+
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsloading] = useState(true);
   const [authError, setAuthError] = useState("");
 
+  const auth = getAuth();
+
   //   --------------------RegisterUser--------------------------
-  const registerUser = (email, password, navigate) => {
+  const registerUser = (email, password, name, navigate) => {
     setIsloading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setAuthError("");
+        // send name to firebase after creation
+        updateProfile(auth.currentUser, {
+          displayName: name,
+        })
+          .then(() => {})
+          .catch((error) => {});
+        navigate("/");
       })
-
       .catch((error) => {
         setAuthError(error.message);
-        navigate("/");
       })
       .finally(() => setIsloading(false));
   };
-
   //   --------------------LoginUser--------------------------
 
   const loginUser = (email, password, location, navigate) => {
